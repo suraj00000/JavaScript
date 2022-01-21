@@ -51,22 +51,23 @@ next.addEventListener("click", nextCV);
 const candiates = cvIterator(data);
 nextCV();
 function nextCV() {
-    const currentCandidate = candiates.next().value;
-    console.log(currentCandidate);    
-    if(currentCandidate!=undefined){
-  let image = document.getElementById("image");
-  let profile = document.getElementById("profile");
-  image.innerHTML = `<img src="${currentCandidate.Image}">`;
-  profile.innerHTML = `
+  const currentCandidate = candiates.next().value;
+  console.log(currentCandidate);
+  if (currentCandidate != undefined) {
+    let image = document.getElementById("image");
+    let profile = document.getElementById("profile");
+    image.innerHTML = `<img src="${currentCandidate.Image}">`;
+    profile.innerHTML = `
     <ul class="list-group">
     <li class="list-group-item">${currentCandidate.name}</li>
     <li class="list-group-item"><strong>Age :</strong>${currentCandidate.age}</li>
     <li class="list-group-item"><strong>Lives in :</strong> ${currentCandidate.city}</li>
     <li class="list-group-item"><strong>language :</strong> ${currentCandidate.language}</li>
     <li class="list-group-item"><strong>Use :</strong> ${currentCandidate.framework}</li>
-  </ul> `;} else{
-      alert("End of application");
-      window.location.reload();
+  </ul> `;
+  } else {
+    alert("End of application");
+    window.location.reload();
   }
 
 }

@@ -1,0 +1,16 @@
+body{
+    padding: 10px;
+    margin: 0px;
+    line-height: 1.6;
+    font-size: 18px;
+}
+/* ul li{
+    background: crimson;
+} */
+.red{
+    background: rgb(255, 0, 0);
+}
+
+.yellow{    
+    background: yellow;
+}
